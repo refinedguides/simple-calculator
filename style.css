@@ -19,16 +19,17 @@
 }
 
 body {
-  display: grid;
-  place-items: center;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100dvh;
   background: linear-gradient(135deg, deepskyblue, royalblue);
 }
 
 .calculator {
+  margin-block: auto;
   background-color: var(--paynes-gray);
-  max-width: 420px;
-  width: 90%;
+  width: min(420px, 80%);
   padding: var(--gap);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -70,6 +71,7 @@ body {
   background-color: var(--tea-green);
 }
 
+.calculator button:hover,
 .calculator button:active {
   background-color: var(--dark-color);
   color: var(--light-color);

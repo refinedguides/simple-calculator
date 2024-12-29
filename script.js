@@ -1,11 +1,8 @@
 const display = document.querySelector(".calculator output");
-
 const btns = document.querySelectorAll(".calculator button");
 
 let expression, operand;
 let isNewOperation = false;
-
-document.addEventListener("DOMContentLoaded", resetValues);
 
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -107,3 +104,5 @@ function resetValues() {
 
   operand = "operandOne";
 }
+
+resetValues();
